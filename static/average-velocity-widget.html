@@ -3,7 +3,6 @@
 
 <head>
     <script src="./sdk/VSS.SDK.min.js"></script>
-    <!-- <script src="./js/bootstrapper.js"></script> -->
     <script type="text/javascript">
         VSS.init({
             explicitNotifyLoaded: true,
@@ -21,16 +20,11 @@
 </head>
 
 <body>
-    <div id="average-velocity-widget" class="widget" style="background-color: rgb(0, 156, 204);  height: 160px; width: 160px;">
-        <div class="velocity-widget-content" style="display: none;">
-            <h2 class="title truncated-text-ellipsis"><span class="application-title">Project Name</span></h2>
-            <div class="big-count truncated-text-ellipsis">
-                <span class="average-velocity">-</span>
-            </div>
-            <div class="footer truncated-text-ellipsis"><span class="work-item-count">Loading...</span></div>
-        </div>
+    <div class="widget" style="background-color: rgb(0, 156, 204);">
+        <h2 class="title truncated-text-ellipsis" id="widget-title">Average Story Size</h2>
+        <div class="big-count" id="average-velocity">-</div>
+        <div class="footer truncated-text-ellipsis">Based on <span id="work-item-count">-</span> work items</div>
     </div>
-
 </body>
 
 
