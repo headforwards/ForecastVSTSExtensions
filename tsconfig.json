@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        // "outFile": "./js/app.js",
+        "outDir": "./dist",
+        // "rootDir": "./src",
+        "module": "amd", 
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "removeComments": true,
+        // "noImplicitAny" : true,
+        // "alwaysStrict": true,
+        // "noImplicitReturns": true,
+        // "noImplicitThis": true,
+        // "noFallthroughCasesInSwitch": true
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "types": [
+            "vss-web-extension-sdk"
+        ],
+        "lib": [
+            "dom",
+            "es5",
+            "scripthost",
+            "es2015.iterable"
+        ]
+    },
+    "exclude": [
+        "./node_modules/**/*",
+        "./src/tests/**/*"
+    ]
+}

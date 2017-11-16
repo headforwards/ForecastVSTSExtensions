@@ -1,0 +1,21 @@
+{
+    "description": "",
+    "author": "David Longman",
+    "license": "MIT",
+    "scripts": {
+        "package": "del *.vsix && tfx extension create --manifest-globs vss-extension.json --rev-version",
+        "prebuild": "if exist .\\dist\\ rmdir /s /q .\\dist\\",
+        "build": "tsc -p .",
+        "postbuild": "npm run test && npm run package",
+        "test": "echo 'No test defined'",
+        "marketplace-publish": "tfx extension publish --manifest-globs vss-extension.json --share-with dlongman.visualstudio.com --token aivnlwaizra3ybrkfxixdos3yw5k4ftcsln34lssn272elixrapa"
+      },
+    "dependencies": {
+        "@types/q": "^1.0.6",
+        "@types/requirejs": "^2.1.31",
+        "vss-web-extension-sdk": "^4.125.2"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1"
+    }
+}
