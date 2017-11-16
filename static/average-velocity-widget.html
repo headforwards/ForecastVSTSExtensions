@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./sdk/VSS.SDK.min.js"></script>
+    <!-- <script src="./js/bootstrapper.js"></script> -->
+    <script type="text/javascript">
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformStyles: true,
+            configureModuleLoader: true
+        });
+
+        // Load main entry point for extension
+        VSS.require(["dist/bootstrapper"], function () {
+            // Loading succeeded
+            VSS.notifyLoadSucceeded();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="average-velocity-widget" class="widget" style="background-color: rgb(0, 156, 204);  height: 160px; width: 160px;">
+        <div class="velocity-widget-content" style="display: none;">
+            <h2 class="title truncated-text-ellipsis"><span class="application-title">Project Name</span></h2>
+            <div class="big-count truncated-text-ellipsis">
+                <span class="average-velocity">-</span>
+            </div>
+            <div class="footer truncated-text-ellipsis"><span class="work-item-count">Loading...</span></div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
